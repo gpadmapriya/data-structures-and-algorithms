@@ -27,7 +27,6 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   let validator = /[A-Z][a-z]*/g;
-  //let validator = /([A-Z])\w+/g;
   let arr = str.match(validator);
   if (arr !== null) {
     return arr;
@@ -43,12 +42,18 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  let expression = /([^\s][A-J])\w*/g;
+
+  let expression = /^[A-J]/;
+  let newArray = [];
+  let match = false;
 
   for (let i = 0; i < arr.length; i++) {
-    arr[i].match(expression);
+    match = expression.test(arr[i]);
+    if (match) {
+      newArray.push(arr[i]);
+    }
   }
-  return arr;
+  return newArray;
 
 };
 
@@ -65,8 +70,8 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  let validator = /[Oo][(ct)]/g;
-  return validator.test(input);
+  let validator = /^[Oo]ct(ober)?\b/g;
+  return (validator.test(input));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,7 +85,12 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  // Solution code here...
+  let validator = /\b\w*(?: )/g;
+  let match = [];
+  match = str.match(validator);
+  if (match !== null) {
+    return (match);
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -96,7 +106,7 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
 let hangman = (str) => {
-  // Solution code here...
+  return str.replace(/[aeiou]/gi, '_');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -112,21 +122,21 @@ Hint: All of these words end with the letters "ells".
 const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
 
 const findShells = (str) => {
-  // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
-
+ 
 All the code below will verify that your functions are working to solve the challenges.
-
+ 
 DO NOT CHANGE any of the below code.
-
+ 
 Run your tests from the console: jest challenges-04.solution.test.js
-
+ 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should return true if the input is a number', () => {
     expect(isNum(1234567890)).toBeTruthy();
     expect(isNum('12345')).toBeTruthy();
@@ -140,7 +150,7 @@ xdescribe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should only return words that begin with a capital letter', () => {
     const capitalResult = isCapitalized('We only want to Return the Words that begin With a capital Letter');
 
@@ -169,7 +179,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should match any of the acceptable inputs', () => {
     expect(matchMonth('Oct')).toBeTruthy();
     expect(matchMonth('oct')).toBeTruthy();
@@ -187,7 +197,7 @@ xdescribe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lacinia vel massa sed egestas. Nunc faucibus iaculis elit, a scelerisque enim condimentum sed. Aenean ac scelerisque sem, et pharetra diam.';
 
   test('It should only return words that are immediately followed by a space', () => {
@@ -201,7 +211,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   let startString = 'This is a regex challenge. We are trying to create a hangman phrase where all of the vowels are missing!';
 
   test('It should remove the vowels from the hangman string and replace them with underscores', () => {
