@@ -99,6 +99,7 @@ const hasChildrenValues = (arr, character) => {
     }
   });
   return result;
+  //Array.isArray(Object.values(characterObj))
 };
 
 /* ------------------------------------------------------------------------------------------------
