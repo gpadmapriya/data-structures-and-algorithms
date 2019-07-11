@@ -39,9 +39,7 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  let newArray = [];
-  arr.map((el) => newArray.push(Math.pow(2, el)));
-  return newArray;
+  return arr.map(el => Math.pow(2, el));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,9 +53,7 @@ For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
 const charCode = (arr) => {
-  let newArray = [];
-  arr.map(el => newArray.push(el.charCodeAt()));
-  return newArray;
+  return arr.map(el => el.charCodeAt());
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,6 +71,7 @@ const evenOdd = (arr) => {
   arr.map(el => {
     if (isNaN(el)) {
       newArray.push('N/A');
+      return 'N/A';
     } else if (el % 2 === 0) {
       newArray.push('even');
     } else if (el % 2 !== 0) {
