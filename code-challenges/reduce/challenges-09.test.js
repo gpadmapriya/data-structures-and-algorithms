@@ -144,28 +144,16 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  /*return arr.reduce((acc, val) => {
-    if (val.children !== null) {
-      console.log(val.children);
-      return val.children.reduce((accumulator) => {
-        accumulator++;
-        return accumulator;
-      }, 0);
-    }
-  }, 0);*/
-
   return arr.reduce((acc, val) => {
-    if (val.children !== null) {
-      let number = val.children.reduce(acc1 => {
-        acc1++;
-        return acc1;
-      }, 0);
-      acc = acc + number;
+    if (val.children) {
+      acc.push(val.children.length);
     }
     return acc;
-  }, 0);
+  }, []).reduce((acc, val) => acc + val);
 
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
