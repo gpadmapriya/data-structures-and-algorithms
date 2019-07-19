@@ -152,6 +152,11 @@ For example, ['Tuesday', 'Monday', 'Wednesday and Thursday', 'Tuesday 2', 'Thurs
 const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 const sortByDay = (arr) => {
+  daysOfWeek.map((val => {
+    arr.includes(val)
+  });
+};
+/*const sortByDay = (arr) => {
   let retArr = [[], [], [], [], [], [], []];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].includes('Monday')) {
@@ -179,6 +184,8 @@ const sortByDay = (arr) => {
   }
   return retArr;
 };
+*/
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
