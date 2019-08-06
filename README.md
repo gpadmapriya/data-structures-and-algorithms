@@ -1,6 +1,6 @@
 # data-structures-and-algorithms
 - 301
-  - code challenge 1 - forEach
+  - [code challenge 1 - forEach](https://github.com/gpadmapriya/data-structures-and-algorithms/tree/master/code-challenges/for-each)
   - code challenge 2 - pass by value and pass by reference
   - code challenge 3 - Sort
   - code challenge 4 - Regular expressions part 1
