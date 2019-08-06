@@ -25,4 +25,4 @@
 space <- O(n) - as we create a new array with n elements.
 
 - Solution 
-![Reversing an array](~/codefellows/301/data-structures-and-algorithms/assets/array_reverse.JPG)
+![Reversing an array](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/assets/array_reverse.JPG)
