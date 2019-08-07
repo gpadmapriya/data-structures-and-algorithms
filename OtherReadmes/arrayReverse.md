@@ -6,5 +6,5 @@
 - Efficiency: time <- O(n) - as we are iterating over the input array from beginning to end.
 space <- O(n) - as we create a new array with n elements.
 
-- [Solution](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/code401challenges/ArrayReverse.java) 
+- [Solution](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/ArrayReverse.java) 
 ![Reversing an array](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/assets/array_reverse.JPG)

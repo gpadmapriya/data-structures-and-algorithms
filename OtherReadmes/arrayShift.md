@@ -6,5 +6,6 @@
 - Efficiency: time <- O(n) - as we are iterating over the input array from beginning to end.
 space <- O(n) - as we create a new array with n elements.
 
-- [Solution](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/code401challenges/ArrayShift.java) 
+- [Link to Code](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/ArrayShift.java) 
+- [Link to tests](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/code401challenges/src/test/java/code401challenges/ArrayShiftTest.java)
 ![Insert element at middle index of an array](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/assets/array_shift.JPG)
