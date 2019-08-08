@@ -16,7 +16,6 @@ public class ArrayShiftTest {
         int[] expectedArray = new int[]{4,8,15,16,23,42};
         int[] inputArray = new int[]{4,8,15,23,42};
         assertArrayEquals("insertShiftArray should return the expected array(new value inserted after middle index-array with odd number of elements)", expectedArray, ArrayShift.insertShiftArray(inputArray, 16));
-
     }
 
     @Test public void testinsertShiftArray_edgecase() {
