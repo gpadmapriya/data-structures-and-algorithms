@@ -62,20 +62,5 @@ public class LinkedList {
         }
         return returnString;
     }
-    public static void main(String[] args){
-        LinkedList newList = new LinkedList();
-        System.out.println(newList.toString());
-        System.out.println(newList.head);
-        System.out.println(newList.includes(4));
-        newList.insert(4);
-        newList.insert(6);
-        newList.insert(10);
-        System.out.println(newList.head.data);
-        newList.insert(13);
-        newList.insert(1);
-        System.out.println(newList.head.data);
-        System.out.println(newList.includes(4));
-        System.out.println(newList.includes(2));
-        System.out.println(newList.toString());
-    }
+
 }
