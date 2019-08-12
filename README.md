@@ -19,3 +19,6 @@
   - [Day 1: Reverse an array](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/arrayReverse.md)
   - [Day 2: Insert into middle index and shift array elements](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/arrayShift.md)
   - [Day 3: Binary search in a sorted 1D array](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/binarySearch.md)
+
+- Data Structures
+ - [Linked Lists](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/LinkedList.md)
