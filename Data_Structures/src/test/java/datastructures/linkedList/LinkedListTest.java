@@ -76,4 +76,67 @@ public class LinkedListTest {
         assertEquals("Values in the linked list: 1 13 10 6 4", toStringList.toString());
     }
 
+    @Test
+    public void testAppend(){
+        datastructures.linkedList.LinkedList toStringList = new datastructures.linkedList.LinkedList();
+        toStringList.insert(4);
+        toStringList.insert(6);
+        toStringList.insert(10);
+        toStringList.insert(13);
+        toStringList.insert(1);
+        toStringList.append(20);
+        assertEquals("Values in the linked list: 1 13 10 6 4 20", toStringList.toString());
+    }
+
+    @Test
+    public void testAppendMultipleNodes(){
+        datastructures.linkedList.LinkedList appendList = new datastructures.linkedList.LinkedList();
+        appendList.insert(4);
+        appendList.insert(6);
+        appendList.insert(10);
+        appendList.append(13);
+        appendList.append(1);
+        appendList.append(20);
+        assertEquals("Values in the linked list: 10 6 4 13 1 20", appendList.toString());
+    }
+
+    @Test
+    public void testInsertBeforeMiddle(){
+        datastructures.linkedList.LinkedList insertList = new datastructures.linkedList.LinkedList();
+        insertList.insert(4);
+        insertList.insert(6);
+        insertList.insert(10);
+        insertList.insertBefore(6,13);
+        assertEquals("Values in the linked list: 10 13 6 4", insertList.toString());
+    }
+
+    @Test
+    public void testInsertBeforeFirst(){
+        datastructures.linkedList.LinkedList insertFirstList = new datastructures.linkedList.LinkedList();
+        insertFirstList.insert(4);
+        insertFirstList.insert(6);
+        insertFirstList.insert(10);
+        insertFirstList.insertBefore(10,13);
+        assertEquals("Values in the linked list: 13 10 6 4", insertFirstList.toString());
+    }
+
+    @Test
+    public void testInsertAfterMiddle(){
+        datastructures.linkedList.LinkedList insertList = new datastructures.linkedList.LinkedList();
+        insertList.insert(4);
+        insertList.insert(6);
+        insertList.insert(10);
+        insertList.insertAfter(6,13);
+        assertEquals("Values in the linked list: 10 6 13 4", insertList.toString());
+    }
+
+    @Test
+    public void testInsertAfterLast(){
+        datastructures.linkedList.LinkedList insertFirstList = new datastructures.linkedList.LinkedList();
+        insertFirstList.insert(4);
+        insertFirstList.insert(6);
+        insertFirstList.insert(10);
+        insertFirstList.insertAfter(4,13);
+        assertEquals("Values in the linked list: 10 6 4 13", insertFirstList.toString());
+    }
 }
