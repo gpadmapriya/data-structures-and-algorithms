@@ -43,6 +43,8 @@ Implement a Singly Linked List Data Structure
 
   [Test Cases](https://github.com/gpadmapriya/data-structures-and-algorithms/tree/master/Data_Structures/src/test/java/datastructures)
 
+  ![Linked list insertions](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/assets/ll_insertions.JPG)
+
 
 
 
