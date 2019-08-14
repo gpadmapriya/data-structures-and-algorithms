@@ -21,4 +21,4 @@
   - [Day 3: Binary search in a sorted 1D array](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/binarySearch.md)
 
 - Data Structures
- - [Linked Lists](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/LinkedList.md)
+  - [Linked Lists](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/LinkedList.md)
