@@ -1,6 +1,16 @@
 package datastructures.linkedList;
 
 public class LinkedList {
+
+    static class indexException extends Exception {
+         indexException(String message){
+            super(message);
+
+        }
+
+        public static void expectMessage(String for_input_string) {
+        }
+    }
     public static Node head;
 
     public LinkedList() {
@@ -128,4 +138,38 @@ public class LinkedList {
         }
     }
 
+    public int kthFromEnd(int k) throws indexException {
+        Node current = head;
+        int counter = 0;
+        while (current != null){
+            counter++;
+            current = current.next;
+        }
+
+        try {
+            if ((k >= counter) || (k < 0)) {
+                throw new indexException("Index out of range");
+
+            } else {
+                int newLength = counter - k;
+                current = head;
+                for (int i = 1; i < newLength; i++){
+                    current = current.next;
+                }
+                return current.data;
+            }
+        } catch (indexException e){
+            System.out.println(e.getMessage());
+            return -1;
+        }
+
+    }
+    public static void main(String[] args) throws indexException {
+        LinkedList newList = new LinkedList();
+        newList.insert(1);
+        int newData = newList.kthFromEnd(1);
+        System.out.println(newList.toString());
+        System.out.println(newData + " New Data");
+
+    }
 }
