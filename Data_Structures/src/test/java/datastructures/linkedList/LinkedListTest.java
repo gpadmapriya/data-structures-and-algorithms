@@ -201,4 +201,55 @@ public class LinkedListTest {
         int value = kThFromEndList.kthFromEnd(2);
         assertEquals(3, value);
     }
+
+    @Test
+    public void testMergerLists_MoreNodesInList2() {
+        datastructures.linkedList.LinkedList newList1 = new datastructures.linkedList.LinkedList();
+        datastructures.linkedList.LinkedList newList2 = new datastructures.linkedList.LinkedList();
+        newList1.insert(1);
+        newList1.insert(3);
+        newList1.insert(5);
+        newList2.insert(7);
+        newList2.insert(8);
+        newList2.insert(9);
+        newList2.insert(10);
+        newList2.insert(11);
+        LinkedList.mergeLists(newList1, newList2);
+        String returnString = newList1.toString();
+        assertEquals("Values in the linked list: 5 11 3 10 1 9 8 7", returnString);
+    }
+
+    @Test
+    public void testMergerLists_MoreNodesInList1() {
+        datastructures.linkedList.LinkedList newList1 = new datastructures.linkedList.LinkedList();
+        datastructures.linkedList.LinkedList newList2 = new datastructures.linkedList.LinkedList();
+        newList1.insert(1);
+        newList1.insert(3);
+        newList1.insert(5);
+        newList1.insert(7);
+        newList1.insert(8);
+        newList2.insert(9);
+        newList2.insert(10);
+        newList2.insert(11);
+        LinkedList.mergeLists(newList1, newList2);
+        String returnString = newList1.toString();
+        assertEquals("Values in the linked list: 8 11 7 10 5 9 3 1", returnString);
+    }
+
+    @Test
+    public void testMergerLists_EqualNumberOfNodes() {
+        datastructures.linkedList.LinkedList newList1 = new datastructures.linkedList.LinkedList();
+        datastructures.linkedList.LinkedList newList2 = new datastructures.linkedList.LinkedList();
+        newList1.insert(1);
+        newList1.insert(3);
+        newList1.insert(5);
+        newList1.insert(7);
+        newList2.insert(8);
+        newList2.insert(9);
+        newList2.insert(10);
+        newList2.insert(11);
+        LinkedList.mergeLists(newList1, newList2);
+        String returnString = newList1.toString();
+        assertEquals("Values in the linked list: 7 11 5 10 3 9 1 8", returnString);
+    }
 }

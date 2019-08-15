@@ -11,11 +11,11 @@ public class LinkedList {
         public static void expectMessage(String for_input_string) {
         }
     }
-    public static Node head;
+    public Node head = null;
 
-    public LinkedList() {
-        head = null;
-    }
+//    public LinkedList() {
+//        this.head = null;
+//    }
 
     public String insert(int data) {
         Node newNode = new Node(data);
@@ -164,12 +164,29 @@ public class LinkedList {
         }
 
     }
-    public static void main(String[] args) throws indexException {
-        LinkedList newList = new LinkedList();
-        newList.insert(1);
-        int newData = newList.kthFromEnd(1);
-        System.out.println(newList.toString());
-        System.out.println(newData + " New Data");
 
+    public static Node mergeLists(LinkedList firstList, LinkedList secondList){
+        Node start = firstList.head;
+        Node currentFirstList = firstList.head;
+        Node nextFirstList = null;
+        Node currentSecondList = secondList.head;
+        Node nextSecondList = null;
+
+        while((currentFirstList != null) && (currentSecondList != null)){
+
+            nextFirstList = currentFirstList.next;
+            currentFirstList.next = currentSecondList;
+
+            if(nextFirstList != null)
+            {
+                nextSecondList = currentSecondList.next;
+                currentSecondList.next = nextFirstList;
+            }
+            currentFirstList = nextFirstList;
+            currentSecondList = nextSecondList;
+
+        }
+
+        return start;
     }
 }
