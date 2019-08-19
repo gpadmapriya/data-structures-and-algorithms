@@ -22,3 +22,5 @@
 
 - Data Structures
   - [Linked Lists](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/LinkedList.md)
+  - [Stacks](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/Stack.md)
+  - [Queues](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/Queue.md)
