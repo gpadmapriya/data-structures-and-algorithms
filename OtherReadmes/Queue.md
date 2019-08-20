@@ -1,4 +1,4 @@
-### Stacks
+### Queues
 Implement a Queue Data Structure
 
 #### Challenge

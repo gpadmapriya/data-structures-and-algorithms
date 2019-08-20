@@ -3,6 +3,8 @@ package datastructures.stacksandqueues;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.NoSuchElementException;
+
 import static org.junit.Assert.assertEquals;
 
 public class QueueTest {
@@ -40,7 +42,7 @@ public class QueueTest {
         String queue = newQueue.dequeue();
         assertEquals("10", queue);
     }
-    @Test
+    @Test(expected = NoSuchElementException.class)
     public void testDequeueMultipleValues() {
         datastructures.stacksandqueues.Queue<String> newQueue = new Queue<>();
         newQueue.enqueue("10");
@@ -50,7 +52,7 @@ public class QueueTest {
         newQueue.dequeue();
         newQueue.dequeue();
         String queue = newQueue.dequeue();
-        assertEquals("Queue is empty. Cannot dequeue", queue);
+
     }
     @Test
     public void testPeekQueue() {
@@ -58,10 +60,10 @@ public class QueueTest {
         newPeekQueue.enqueue(10);
         newPeekQueue.enqueue(20);
         newPeekQueue.enqueue(30);
-        String queue = newPeekQueue.peek();
-        assertEquals("10", queue);
+        int queue = newPeekQueue.peek();
+        assertEquals(10, queue);
     }
-    @Test
+    @Test(expected = NoSuchElementException.class)
     public void testPeekEmptyQueue() {
         datastructures.stacksandqueues.Queue<String> newQueue = new Queue();
         newQueue.enqueue("10");
@@ -71,6 +73,6 @@ public class QueueTest {
         newQueue.dequeue();
         newQueue.dequeue();
         String queue = newQueue.peek();
-        assertEquals("Queue is empty. Cannot peek", queue);
+
     }
 }

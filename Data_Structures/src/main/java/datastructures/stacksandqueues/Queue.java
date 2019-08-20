@@ -1,12 +1,10 @@
 package datastructures.stacksandqueues;
 
-import datastructures.linkedList.LinkedList;
-
 import java.util.NoSuchElementException;
 
 public class Queue<T> {
-    private Node front = null;
-    private Node rear = null;
+    private Node<T> front = null;
+    private Node<T> rear = null;
 
     public String enqueue(T value){
         Node newNode = new Node(value);
@@ -20,25 +18,28 @@ public class Queue<T> {
         }
         return "Element enqueued";
     }
-    public String dequeue(){
-        String returnString = "";
-        try {
-            returnString = front.data.toString();
+    public T dequeue(){
+        if (this.front == null){
+            throw new NoSuchElementException("Queue is empty. Cannot dequeue");
+        } else {
+            T returnValue = front.data;
             front = front.next;
-        } catch (NullPointerException e){
-            returnString = "Queue is empty. Cannot dequeue";
+            return returnValue;
         }
-        return returnString;
     }
-    public String peek(){
-        String returnString = "";
-        try {
-            returnString = front.data.toString();
-
-        } catch (NullPointerException e){
-            returnString = "Queue is empty. Cannot peek";
+    public T peek(){
+        if (this.front == null){
+            throw new NoSuchElementException("Queue is empty. Cannot peek");
+        } else {
+            return front.data;
         }
-        return returnString;
+    }
+    public boolean isEmpty(){
+        if (this.front == null){
+            return true;
+        } else {
+            return false;
+        }
     }
     public String toString() {
         String returnString = "";

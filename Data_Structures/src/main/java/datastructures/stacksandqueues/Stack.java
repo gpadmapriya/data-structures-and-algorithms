@@ -1,9 +1,9 @@
 package datastructures.stacksandqueues;
 
-import java.util.EmptyStackException;
+import java.util.NoSuchElementException;
 
 public class Stack<T> {
-    public Node top = null;
+    public Node<T> top = null;
 
     public String push(T value){
         Node newNode = new Node(value);
@@ -19,24 +19,29 @@ public class Stack<T> {
         return result;
     }
 
-    public String pop(){
-        String returnString = "";
-        try {
-            returnString = top.data.toString();
-            top = top.next;
-        } catch (NullPointerException e){
-            returnString = "Stack is empty. Cannot pop";
+    public boolean isEmpty(){
+        if (this.top == null){
+            return true;
+        } else {
+            return false;
         }
-        return returnString;
     }
-    public String peek(){
-        String returnString = "";
-        try {
-            returnString = top.data.toString();
-        } catch (NullPointerException e){
-            returnString = "Stack is empty. Cannot peek";
+    public T pop(){
+        if (this.isEmpty()){
+            throw new NoSuchElementException("Stack is empty. Cannot pop");
+        } else {
+            T returnValue = top.data;
+            top = top.next;
+            return returnValue;
         }
-        return returnString;
+    }
+    public T peek(){
+        if (this.isEmpty()){
+            throw new NoSuchElementException("Stack is empty. Cannot peek");
+        } else {
+            T returnValue = top.data;
+            return returnValue;
+        }
     }
     public String toString() {
         String returnString = "";
