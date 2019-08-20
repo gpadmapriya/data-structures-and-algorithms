@@ -2,6 +2,8 @@ package datastructures.stacksandqueues;
 
 import org.junit.Test;
 
+import java.util.NoSuchElementException;
+
 import static org.junit.Assert.assertEquals;
 
 public class StackTest {
@@ -38,7 +40,7 @@ public class StackTest {
         String stack = newStack.pop();
         assertEquals("40", stack);
     }
-    @Test
+    @Test(expected = NoSuchElementException.class)
     public void testPopMultipleValuesOffStack() {
         datastructures.stacksandqueues.Stack<String> newStack = new Stack<String>();
         newStack.push("10");
@@ -48,7 +50,6 @@ public class StackTest {
         newStack.pop();
         newStack.pop();
         String stack = newStack.pop();
-        assertEquals("Stack is empty. Cannot pop", stack);
     }
     @Test
     public void testPeekStack() {
@@ -58,12 +59,12 @@ public class StackTest {
         newPeekStack.push(30);
         newPeekStack.pop();
         newPeekStack.pop();
-        String stack = newPeekStack.peek();
-        assertEquals("10", stack);
+        int stack = newPeekStack.peek();
+        assertEquals(10, stack);
     }
-    @Test
+    @Test(expected = NoSuchElementException.class)
     public void testPeekEmptyStack() {
-        datastructures.stacksandqueues.Stack newStack = new Stack();
+        datastructures.stacksandqueues.Stack<String> newStack = new Stack<>();
         newStack.push("10");
         newStack.push("20");
         newStack.push("30");
@@ -71,6 +72,6 @@ public class StackTest {
         newStack.pop();
         newStack.pop();
         String stack = newStack.peek();
-        assertEquals("Stack is empty. Cannot peek", stack);
+
     }
 }
