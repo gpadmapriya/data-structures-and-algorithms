@@ -3,8 +3,8 @@ package datastructures.stacksandqueues;
 import java.util.NoSuchElementException;
 
 public class Queue<T> {
-    private Node<T> front = null;
-    private Node<T> rear = null;
+    protected Node<T> front = null;
+    protected Node<T> rear = null;
 
     public String enqueue(T value){
         Node newNode = new Node(value);

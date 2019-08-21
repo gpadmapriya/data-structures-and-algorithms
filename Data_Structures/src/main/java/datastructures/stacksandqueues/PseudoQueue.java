@@ -14,24 +14,16 @@ public class PseudoQueue<T> {
         }
     }
     public void enqueue (T value){
-
-           while (!stack2.isEmpty()) {
-                T data = stack2.pop();
-                stack1.push(data);
-            }
         stack1.push(value);
-
     }
 
     public T dequeue(){
-        if (this.isEmpty()){
-            throw new NoSuchElementException("Queue is empty. Cannot dequeue");
-        } else {
+        if (stack2.isEmpty()){
             while (!stack1.isEmpty()) {
                 T data = stack1.pop();
                 stack2.push(data);
-            }
-            return stack2.pop();
+           }
         }
+        return stack2.pop();
     }
 }
