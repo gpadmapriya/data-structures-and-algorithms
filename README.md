@@ -23,8 +23,9 @@
 - Data Structures
   - [Linked Lists](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/LinkedList.md)
   - [Stacks](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/Stack.md)
+    - [Multi Bracket Validation](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/MultiBracketValidation.md)
   - [Queues](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/Queue.md)
-  - [PseudoQueue](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/PseudoQueue.md)
-  - [First In First Out Animal Shelter](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/AnimalShelter.md)
-  - [Multi Bracket Validation](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/MultiBracketValidation.md)
+    - [PseudoQueue](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/PseudoQueue.md)
+    - [First In First Out Animal Shelter](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/AnimalShelter.md) 
+  - [Tree](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/Tree.md)
   
