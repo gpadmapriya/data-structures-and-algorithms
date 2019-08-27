@@ -28,4 +28,4 @@
     - [PseudoQueue](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/PseudoQueue.md)
     - [First In First Out Animal Shelter](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/AnimalShelter.md) 
   - [Tree](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/Tree.md)
-  
+    - [FizzBuzz Tree](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/FizzBuzzTree.md)
