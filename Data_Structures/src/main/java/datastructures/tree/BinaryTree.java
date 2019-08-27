@@ -8,12 +8,20 @@ import java.util.List;
 public class BinaryTree<T> {
     protected Node<T> root;
 
-    BinaryTree() {
+    public BinaryTree() {
         root = null;
     }
 
-    BinaryTree(T data){
+    public BinaryTree(T data){
         root = new Node(data);
+    }
+
+    public Node<T> getRoot() {
+        return root;
+    }
+
+    public void setRoot(Node<T> root) {
+        this.root = root;
     }
 
     //https://javarevisited.blogspot.com/2016/07/binary-tree-preorder-traversal-in-java-using-recursion-iteration-example.html
