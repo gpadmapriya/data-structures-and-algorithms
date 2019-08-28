@@ -84,7 +84,7 @@ public class BinaryTreeTest {
         assertEquals("Test Inorder traversal", testValues, returnValues);
     }
     @Test
-    public void testPostOrderTraversal() {
+    public void testBreadthFirtstTraversal() {
         BinaryTree bt = new BinaryTree(4);
         bt.root = new Node(4);
         Node right = new Node(3);
@@ -95,14 +95,19 @@ public class BinaryTreeTest {
         bt.root.right = right;
         bt.root.left.right = newRight;
         bt.root.left.left = newLeft;
+        bt.root.right.left = new Node(10);
+        bt.root.right.right = new Node(13);
+        List returnValues = BinaryTree.breadthFirst(bt);
 
-        List returnValues = bt.postOrder(bt.root);
         List testValues = new ArrayList();
-        testValues.add(6);
-        testValues.add(7);
+        testValues.add(4);
         testValues.add(2);
         testValues.add(3);
-        testValues.add(4);
-        assertEquals("Test Post order traversal", testValues, returnValues);
+        testValues.add(6);
+        testValues.add(7);
+        testValues.add(10);
+        testValues.add(13);
+        assertEquals("Test Breadth First traversal", testValues, returnValues);
     }
+
 }

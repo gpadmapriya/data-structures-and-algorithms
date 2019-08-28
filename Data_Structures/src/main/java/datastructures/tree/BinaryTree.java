@@ -1,5 +1,6 @@
 package datastructures.tree;
 
+import datastructures.stacksandqueues.Queue;
 import datastructures.stacksandqueues.Stack;
 
 import java.util.ArrayList;
@@ -96,6 +97,28 @@ public class BinaryTree<T> {
 
         }
         System.out.println(returnValues);
+        return returnValues;
+    }
+
+    public static List breadthFirst(BinaryTree treeToTraverse){
+
+        List returnValues = new ArrayList<>();
+
+        if (treeToTraverse.root != null){
+            Queue<Node> treeNodeQueue = new Queue<>();
+            treeNodeQueue.enqueue(treeToTraverse.root);
+            while (!treeNodeQueue.isEmpty()){
+                Node current = treeNodeQueue.dequeue();
+                if (current.left != null) {
+                    treeNodeQueue.enqueue(current.left);
+                }
+                if (current.right != null) {
+                    treeNodeQueue.enqueue(current.right);
+                }
+                System.out.println(current.data);
+                returnValues.add(current.data);
+            }
+        }
         return returnValues;
     }
 }
