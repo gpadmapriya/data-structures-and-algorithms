@@ -32,10 +32,4 @@ public class FizzBuzzTree {
         return fizzbuzztree;
     }
 
-    public static void main(String[] args){
-        BinaryTree bt = new BinaryTree();
-        BinaryTree newTree = fizzBuzzTree(bt);
-        newTree.inOrder(newTree.getRoot());
-
-    }
 }
