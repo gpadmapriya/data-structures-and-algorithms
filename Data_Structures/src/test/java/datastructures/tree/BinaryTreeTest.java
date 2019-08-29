@@ -110,4 +110,52 @@ public class BinaryTreeTest {
         assertEquals("Test Breadth First traversal", testValues, returnValues);
     }
 
+    @Test
+    public void testMaximumAtLeaf() {
+        BinaryTree bt = new BinaryTree(2);
+        Node right = new Node(5);
+        Node left = new Node(7);
+        Node newRight = new Node(6);
+        Node newLeft = new Node(2);
+        bt.root.left = left;
+        bt.root.right = right;
+        bt.root.left.right = newRight;
+        bt.root.left.right.left = new Node(5);
+        bt.root.left.right.left = new Node(11);
+        bt.root.left.left = newLeft;
+
+        bt.root.right.right = new Node(9);
+        bt.root.right.right.right = new Node(13);
+
+        int max = bt.findMaximumValue();
+
+        assertEquals("Max value at leaf level", 13, max);
+    }
+    @Test
+    public void testMaximumAtRoot() {
+        BinaryTree bt = new BinaryTree(15);
+        Node right = new Node(5);
+        Node left = new Node(7);
+        Node newRight = new Node(6);
+        Node newLeft = new Node(2);
+        bt.root.left = left;
+        bt.root.right = right;
+        bt.root.left.right = newRight;
+        bt.root.left.right.left = new Node(5);
+        bt.root.left.right.left = new Node(11);
+        bt.root.left.left = newLeft;
+
+        bt.root.right.right = new Node(9);
+        bt.root.right.right.right = new Node(13);
+
+        int max = bt.findMaximumValue();
+
+        assertEquals("Max value at leaf level", 15, max);
+    }
+    @Test
+    public void testMaximumForEmptyTree() {
+        BinaryTree bt = new BinaryTree();
+        int max = bt.findMaximumValue();
+        assertEquals("Max value for empty tree", -1, max);
+    }
 }
