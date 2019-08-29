@@ -108,6 +108,7 @@ public class BinaryTree<T> {
             Queue<Node> treeNodeQueue = new Queue<>();
             treeNodeQueue.enqueue(treeToTraverse.root);
             while (!treeNodeQueue.isEmpty()){
+
                 Node current = treeNodeQueue.dequeue();
                 if (current.left != null) {
                     treeNodeQueue.enqueue(current.left);
@@ -120,5 +121,33 @@ public class BinaryTree<T> {
             }
         }
         return returnValues;
+    }
+    public int findMaximumValue(){
+        int max = -1;
+        if (this.root != null){
+
+            Queue<Node> treeNodeQueue = new Queue<>();
+            treeNodeQueue.enqueue(this.root);
+            while (!treeNodeQueue.isEmpty()) {
+
+                Node current = treeNodeQueue.dequeue();
+                if (current.left != null) {
+                    treeNodeQueue.enqueue(current.left);
+                }
+                if (current.right != null) {
+                    treeNodeQueue.enqueue(current.right);
+                }
+                if ((int) current.data > max) {
+                    max = (int) current.data;
+                }
+            }
+        }
+        return max;
+    }
+
+    public static void main(String[] args){
+        BinaryTree bt = new BinaryTree();
+
+        System.out.println(bt.findMaximumValue());
     }
 }
