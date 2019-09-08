@@ -142,12 +142,9 @@ public class BinaryTree<T> {
                 }
             }
         }
+        if (this.root == null){
+            throw new IllegalArgumentException("cannot find max");
+        }
         return max;
-    }
-
-    public static void main(String[] args){
-        BinaryTree bt = new BinaryTree();
-
-        System.out.println(bt.findMaximumValue());
     }
 }
