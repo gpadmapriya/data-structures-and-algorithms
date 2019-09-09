@@ -33,4 +33,4 @@
     - [Max Tree Value](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/MaxTreeValue.md)
 
 - Algorithms
- - [Insertion Sort](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/InsertionSort.md)
+  - [Insertion Sort](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/InsertionSort.md)
