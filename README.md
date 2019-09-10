@@ -34,3 +34,4 @@
 
 - Algorithms
   - [Insertion Sort](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/InsertionSort.md)
+  - [Merge Sort](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/MergeSort.md)

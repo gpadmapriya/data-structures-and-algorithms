@@ -14,23 +14,4 @@ public class InsertionSort {
             arr[j + 1] = temp;
         }
     }
-
-    public static void main(String[] args){
-        int arr[] = {23, 13, 45, 56, 9, 32, 13 };
-
-        InsertionSort is = new InsertionSort();
-        is.insertionSort(arr);
-        printArray(arr);
-    }
-
-    static void printArray(int arr[])
-    {
-        int n = arr.length;
-        for (int i = 0; i < n; ++i)
-            System.out.print(arr[i] + " ");
-
-        System.out.println();
-    }
-
-
 }
