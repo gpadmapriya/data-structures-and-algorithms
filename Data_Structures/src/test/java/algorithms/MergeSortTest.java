@@ -35,7 +35,7 @@ public class MergeSortTest {
     }
 
     @Test
-    public void testIergeSort_emptyArray() {
+    public void testMergeSort_emptyArray() {
         int arr[] = { };
 
         MergeSort is = new MergeSort();
