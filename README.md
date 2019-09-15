@@ -31,6 +31,7 @@
     - [FizzBuzz Tree](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/FizzBuzzTree.md)
     - [Breadth First Tree traversal](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/BreadthFirst.md)
     - [Max Tree Value](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/MaxTreeValue.md)
+  - [Hash Table](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/HashTable.md)
 
 - Algorithms
   - [Insertion Sort](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/InsertionSort.md)
