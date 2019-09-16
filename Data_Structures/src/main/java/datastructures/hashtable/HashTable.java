@@ -114,4 +114,11 @@ public class HashTable<T> {
         }
     } //
 
+    public static void main(String[] args){
+        HashTable table = new HashTable(4);
+        table.add("Padma", 1);
+        table.add("Ananya", 2);
+        table.add("Aarthi", 3);
+        table.dump();
+    }
 }
