@@ -99,7 +99,7 @@ public class HashTable<T> {
         return count;
     }
 
-    void dump() {
+    public void dump() {
         System.out.println();
         for (int i = 0; i < table.length; i++) {
             // Print out the location number and the list of
