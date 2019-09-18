@@ -32,7 +32,9 @@
     - [Breadth First Tree traversal](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/BreadthFirst.md)
     - [Max Tree Value](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/MaxTreeValue.md)
   - [Hash Table](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/HashTable.md)
-    -  [Find first Repeated Word](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/RepeatedWord.md)
+    - [Find first Repeated Word](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/RepeatedWord.md)
+    - [Tree Intersection](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/TreeIntersection.md)
+    - [Left Join](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/LeftJoin.md)
 
 - Algorithms
   - [Insertion Sort](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/InsertionSort.md)

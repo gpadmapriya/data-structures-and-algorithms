@@ -114,6 +114,10 @@ public class HashTable<T> {
         }
     } //
 
+    public Node[] getTable() {
+        return table;
+    }
+
     public static void main(String[] args){
         HashTable table = new HashTable(4);
         table.add("Padma", 1);

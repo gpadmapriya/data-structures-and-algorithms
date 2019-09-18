@@ -1,4 +1,4 @@
-### FizzBuzz Tree
+### Tree Intersection
 Find common values in 2 binary trees
 
 #### Challenge
@@ -13,6 +13,6 @@ Find common values in 2 binary trees
 #### Solution
 [Code](https://github.com/gpadmapriya/data-structures-and-algorithms/tree/master/Data_Structures/src/main/java/datastructures/tree/TreeIntersection/TreeIntersection.java)
 
-[Test Cases](https://github.com/gpadmapriya/data-structures-and-algorithms/tree/master/Data_Structures/src/test/java/datastructures/tree/TreeIntersection/TreeIntersectionTest  .java)
+[Test Cases](https://github.com/gpadmapriya/data-structures-and-algorithms/tree/master/Data_Structures/src/test/java/datastructures/tree/TreeIntersection/TreeIntersectionTest.java)
 
 ![Tree Intersection](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/assets/tree_intersection.JPG)
