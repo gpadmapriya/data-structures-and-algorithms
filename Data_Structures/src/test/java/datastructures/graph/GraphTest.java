@@ -4,10 +4,11 @@ import org.checkerframework.common.value.qual.StaticallyExecutable;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class GraphTest {
     @Test
@@ -32,7 +33,7 @@ public class GraphTest {
         HashMap<Node, Integer> newHashMap = new HashMap<>();
         newHashMap.put(n1, 32);
 
-        assertEquals(newHashMap, newGraph.getNeighbors(n2));
+        assertEquals(newHashMap, n2.getWeights());
     }
     @Test
     public void testGetNodes() {
@@ -47,15 +48,19 @@ public class GraphTest {
     public void testGetNeighborsWithWeight() {
         Graph newGraph = new Graph();
         Node n1 = newGraph.addNode(32);
-        Node n2 = newGraph.addNode("Yet another test");
+        Node n2 = newGraph.addNode(12);
         Node n3 = newGraph.addNode(0.5);
 
         newGraph.addEdge(n1, n2, 10);
         newGraph.addEdge(n2, n3, 30);
         newGraph.addEdge(n3, n1, 20);
 
-        HashMap<Node, Integer> newHashMap = n1.getNeighbors();
-        assertEquals(20, (long)newHashMap.get(n3));
+        //HashMap<Node, Integer> newHashMap = n1.getNeighbors();
+        ArrayList<Node> neighbors = n1.getNeighbors();
+
+        assertTrue(neighbors.get(0).equals(n2));
+        assertTrue(neighbors.get(1).equals(n3));
+
 
     }
 
@@ -70,8 +75,9 @@ public class GraphTest {
         newGraph.addEdge(n2, n3, 30);
         newGraph.addEdge(n3, n1, 20);
 
-        HashMap<Node, Integer> newHashMap = n1.getNeighbors();
-        assertTrue(newHashMap.size() == 2);
+        //HashMap<Node, Integer> newHashMap = n1.getNeighbors();
+        ArrayList<Node> neighbors = n1.getNeighbors();
+        assertTrue(neighbors.size() == 2);
 
     }
 

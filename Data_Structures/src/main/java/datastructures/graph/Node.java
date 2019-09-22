@@ -1,18 +1,21 @@
 package datastructures.graph;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
 public class Node<T> {
     private T value;
-    private HashMap<Node<T>, Integer> neighbors;
+    private HashMap<Node<T>, Integer> weights;
+    private ArrayList<Node<T>> neighbors;
 
     public Node(T value){
         this.value = value;
-        this.neighbors = new HashMap<>();
+        this.weights = new HashMap<>();
+        this.neighbors = new ArrayList<>();
     }
 
-    public HashMap<Node<T>, Integer> getNeighbors() {
+    public ArrayList<Node<T>> getNeighbors() {
         return neighbors;
     }
 
@@ -20,7 +23,7 @@ public class Node<T> {
         return value;
     }
 
-    public void setNeighbors(HashMap<Node<T>, Integer> neighbors) {
+    public void setNeighbors(ArrayList<Node<T>> neighbors) {
         this.neighbors = neighbors;
     }
 
@@ -28,10 +31,21 @@ public class Node<T> {
         this.value = value;
     }
 
+    public HashMap<Node<T>, Integer> getWeights() {
+        return weights;
+    }
+
+    public void setWeights(HashMap<Node<T>, Integer> weights) {
+        this.weights = weights;
+    }
+
     public void addNeighbor(Node<T> node, Integer weight) {
-        HashMap<Node<T>, Integer> currentNeighbors = this.getNeighbors();
-        currentNeighbors.put(node, weight);
+        HashMap<Node<T>, Integer> weights = this.getWeights();
+        ArrayList<Node<T>> currentNeighbors = this.getNeighbors();
+        currentNeighbors.add(node);
         this.setNeighbors(currentNeighbors);
+        weights.put(node, weight);
+        this.setWeights(weights);
     }
 
     @Override

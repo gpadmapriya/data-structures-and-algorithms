@@ -35,8 +35,7 @@ public class Graph<T> {
             nodeEnd.addNeighbor(nodeStart, weight);
         }
     }
-
-    public HashMap<Node<T>, Integer> getNeighbors(Node<T> node) {
+    public ArrayList<Node<T>> getNeighbors(Node<T> node) {
         return node.getNeighbors();
     }
     public int size(){
