@@ -37,6 +37,7 @@
     - [Left Join](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/LeftJoin.md)
   - [Graph](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/Graph.md)
     - [Graph - Breadth First Traversal](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/BreadthFirstGraph.md)
+    - [Graph - Get Edge](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/GetGraphEdge.md)
 - Algorithms
   - [Insertion Sort](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/InsertionSort.md)
   - [Merge Sort](https://github.com/gpadmapriya/data-structures-and-algorithms/blob/master/OtherReadmes/MergeSort.md)

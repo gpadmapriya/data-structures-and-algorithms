@@ -30,21 +30,10 @@ public class BreadthFirst<T> {
                     }
                 }
                 returnValues.add((T) current.getValue());
-
             }
 
         }
         return returnValues;
     }
-    public static void main(String[] args){
-        BreadthFirst bf = new BreadthFirst();
 
-        Graph graph = new Graph();
-        Node nodeA = new Node();
-        Node nodeB = graph.addNode("Arendelle");
-        Node nodeC = graph.addNode("Metroville");
-
-        ArrayList results = bf.breadthFirst(nodeC);
-        System.out.println(results);
-    }
 }
