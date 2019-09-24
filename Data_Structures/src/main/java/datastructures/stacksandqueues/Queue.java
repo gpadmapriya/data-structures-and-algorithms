@@ -55,4 +55,13 @@ public class Queue<T> {
         }
         return returnString.trim();
     }
+    public void reverse(){
+        if (front == null){
+            return;
+        } else {
+            T returnValue = dequeue();
+            reverse();
+            enqueue(returnValue);
+        }
+    }
 }
