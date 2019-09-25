@@ -60,4 +60,29 @@ public class Stack<T> {
         }
         return returnString;
     }
+    public void reverse(){
+        if (top != null){
+            T value = this.pop();
+            reverse();
+            insertBack(value);
+        }
+    }
+    public void insertBack(T value){
+        if (this.isEmpty()){
+            this.push(value);
+        } else {
+            T placeHolder = this.pop();
+            insertBack(value);
+            this.push(placeHolder);
+        }
+    }
+    public static void main(String[] args){
+        Stack s = new Stack();
+        s.push(10);
+        s.push(20);
+        s.push(30);
+        System.out.println(s.toString());
+        s.reverse();
+        System.out.println(s.toString());
+    }
 }
